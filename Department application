@@ -1,0 +1,68 @@
+#include<iostream>
+using namespace std;
+#include<conio.h>
+int x[5],prize[5],i,sum=0,sub,n;
+class item
+{
+
+	public:
+		void get()
+		{
+			cout<<"enter the no of item";
+			for(i=0;i<5;i++)
+			{
+			cin>>x[i];
+		    }
+			cout<<"enter the prize of the item";
+			for(i=0;i<5;i++)
+			{
+			cin>>prize[i];
+		    }
+		}
+};
+class add
+{
+	public:
+		void get2()
+		{
+			for(i=0;i<5;i++)
+			{
+			    sum=sum+prize[i];
+			}
+		cout<<"the total prize is"<<sum;
+		}
+};
+
+
+class delet
+{
+	public:
+		void subt()
+		{
+			cout<<endl<<"enter the element to delete in no";
+			cin>>n;
+			for(i=0;i<n;i++)
+			{
+				cout<<endl<<x[i];
+			}
+			cout<<endl<<"enter the prize";
+			for(i=n-1;i>=0;i--)
+			{
+				cout<<prize[i]<<endl;
+		        	sub=sum;
+				sub=sub-prize[i];
+			}
+			cout<<endl<<"the total value after subtraction"<<sub;
+		}
+};
+int main()
+{
+	item t;
+	add a;
+	delet c;
+	t.get();
+	a.get2();
+	c.subt();
+	getch();
+}
+
